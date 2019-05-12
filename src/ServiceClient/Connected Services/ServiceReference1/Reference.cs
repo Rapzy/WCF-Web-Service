@@ -8,27 +8,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Client.ServiceReference1 {
+namespace ServiceClient.ServiceReference1 {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IWordCounter")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://wordcounter.com/", ConfigurationName="ServiceReference1.IWordCounter")]
     public interface IWordCounter {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWordCounter/CountWords", ReplyAction="http://tempuri.org/IWordCounter/CountWordsResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://wordcounter.com/IWordCounter/CountWords", ReplyAction="http://wordcounter.com/IWordCounter/CountWordsResponse")]
         int CountWords(string text);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWordCounter/CountWords", ReplyAction="http://tempuri.org/IWordCounter/CountWordsResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://wordcounter.com/IWordCounter/CountWords", ReplyAction="http://wordcounter.com/IWordCounter/CountWordsResponse")]
         System.Threading.Tasks.Task<int> CountWordsAsync(string text);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IWordCounterChannel : Client.ServiceReference1.IWordCounter, System.ServiceModel.IClientChannel {
+    public interface IWordCounterChannel : ServiceClient.ServiceReference1.IWordCounter, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class WordCounterClient : System.ServiceModel.ClientBase<Client.ServiceReference1.IWordCounter>, Client.ServiceReference1.IWordCounter {
+    public partial class WordCounterClient : System.ServiceModel.ClientBase<ServiceClient.ServiceReference1.IWordCounter>, ServiceClient.ServiceReference1.IWordCounter {
         
         public WordCounterClient() {
         }

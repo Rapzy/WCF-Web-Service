@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Client.ServiceReference1;
+using ServiceClient.ServiceReference1;
 
-namespace Client
+namespace ServiceClient
 {
     class Program
     {
         static void Main(string[] args)
         {
             //Step 1: Create an instance of the WCF proxy.
-             WordCounterClient client = new WordCounterClient();
+            WordCounterClient client = new WordCounterClient();
 
             // Step 2: Call the service operations.
             // Call the Add service operation.

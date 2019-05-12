@@ -7,7 +7,7 @@ using System.Text;
 
 namespace WordCounterLib
 {
-    [ServiceContract]
+    [ServiceContract(Namespace = "http://wordcounter.com/")]
     public interface IWordCounter
     {
         [OperationContract]
